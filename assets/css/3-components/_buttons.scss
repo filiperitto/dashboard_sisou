@@ -1,0 +1,64 @@
+.btn {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 19px;
+    /* identical to box height, or 136% */
+    
+    color: #ffffff;
+    background: $pink;
+    border: 2px solid $pink;
+    padding: 7px 30px;
+    border-radius: 7px;
+    display: table;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    &:hover{
+        background: $purple;
+        border: 2px solid $purple;
+    }
+    &:active{
+        border: 2px solid $purple;
+    }
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 0px 6px rgba($pink, 0.2);
+    }
+
+    &.secundario{
+        background: $cor-secundaria;
+        border: 2px solid $cor-secundaria;
+        &:hover{
+            background: $purple;
+            border: 2px solid $purple;
+        }
+        &:active{
+            border: 2px solid $purple;
+        }
+        &:focus{
+            outline: none;
+            box-shadow: 0 0 0px 6px rgba($cor-secundaria, 0.2);
+        }
+    }
+
+    &.white-trans{
+        background: rgba($white, 0.5);
+        border: 2px solid $white;
+        &:hover{
+            color: $cor-secundaria;
+            background: $white;
+            border: 2px solid $white;
+        }
+        &:active{
+            border: 2px solid $white;
+        }
+        &:focus{
+            outline: none;
+            box-shadow: 0 0 0px 6px rgba($white, 0.2);
+        }
+    }
+}

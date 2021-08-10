@@ -1,0 +1,137 @@
+//== Faq Section ::::
+.moduleFaq {
+    background: #fff;
+    position: relative;
+    padding-bottom: 50px;
+    @include respond-to-min(750){
+        padding-top: 71px;
+        padding-bottom: 80px;
+    }
+    .wave-faq{
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+    .box-cont{
+    }
+    .accordion{
+        width: 100%;
+        //max-width: 970px;
+        margin: auto;
+        .col50{
+            @include respond-to-max(750){
+                padding: 0;
+            }
+            &.odd{
+                .item{
+                    &:nth-child(odd){
+                        display: none;
+                    }
+                }
+            }
+            &.even{
+                .item{
+                    &:nth-child(even){
+                        display: none;
+                    }
+                }
+            }
+        }
+        .acc-heading{
+            align-items: center;
+            //background: #FFFFFF;
+            background: #F4F6FD;
+            //box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            //padding: 40px;
+            padding: 0;
+            border: none;
+            display: block;
+            transition: all .2s ease-in-out;
+            border: 1px solid #F4F6FD;
+            cursor: default;
+            .header-acc{
+                font-style: normal;
+                font-weight: bold;
+                font-family: $font-regular;
+                font-size: 18px;
+                line-height: 22px;
+                /* identical to box height */
+
+
+                /* CTA & Texto */
+
+                color: $cor-secundaria;
+                transition: all .2s ease-in-out;
+                padding: 30px 30px;
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+                align-items: center;
+            }
+            svg{
+                transition: all .2s ease-in-out;
+            }
+            &.active{
+                //box-shadow: 0px 15px 60px rgba(0, 109, 174, 0.1);
+                background: #F4F6FD;
+                margin-bottom: 35px;
+                svg{
+                    transform: rotate(180deg);
+                }
+                .header-acc{
+                    padding: 35px 30px;
+                }
+            }
+            .acc-content{
+                .inner{
+                    padding: 0;
+                    padding: 20px 30px;
+                    border-top: 2px solid #fff;
+                    p{
+                        margin: 0;
+                        
+                        cursor: auto;
+                        font-family: Lato;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 24px;
+                        /* or 157% */
+
+
+                        /* Complementary text */
+
+                        color: #828687;
+                        letter-spacing: 0em;
+                        text-align: left;
+
+                    }
+                }
+            }
+
+        }
+    }
+    .btn-box{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btn{
+        }
+    }
+}
+
+.page-faq{
+    .moduleFaq{
+        padding-top: 40px;
+        @include respond-to-min(650){
+            padding-top: 120px;
+        }
+    }
+}
+//========== /Faq Section

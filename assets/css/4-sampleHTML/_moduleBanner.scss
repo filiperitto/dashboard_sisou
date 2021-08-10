@@ -1,0 +1,65 @@
+.moduleBanner{
+    width: 100%;
+    height: auto;
+    background: url(../img/placeholder-img.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 140px 0 140px;
+    position: relative;
+    @include respond-to-min(650){
+        background-position: right center;
+    }
+    .mask{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(271.04deg, rgba(236, 16, 255, 0.54) 15.24%, rgba(236, 16, 255, 0.54) 79.77%);
+        @include respond-to-min(650){
+            background: linear-gradient(271.04deg, #EC10FF 15.24%, rgba(236, 16, 255, 0) 79.77%);
+        }
+        .top{
+            width: 100%;
+            height: auto;
+            top: -1px;
+            left: 0;
+            position: absolute;
+        }
+        .bot{
+            width: 100%;
+            height: auto;
+            bottom: -1px;
+            left: 0;
+            position: absolute;
+        }
+    }
+    .wrap{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .text-box{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        @include respond-to-min(650){
+            width: 35%;
+            display: block;
+        }
+        h1{
+            font-weight: 400;
+            text-align: center;
+            letter-spacing: 1px;
+            margin-bottom: 13px;
+            @include respond-to-min(650){
+                text-align: left;
+            }
+            .sisou{
+                font-family: $font-sisou;
+            }
+            b{
+                font-weight: bold;
+            }
+        }
+    }
+}

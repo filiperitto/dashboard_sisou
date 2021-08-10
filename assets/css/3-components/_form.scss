@@ -1,0 +1,29 @@
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=tel],
+input[type=date] {
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height, or 119% */
+
+
+    background-color: #fff;
+    color: #111111;
+    border: 1px solid #D3DCE0;
+    padding: 15px 20px;
+    margin: 0;
+    resize: none;
+    height: 47px;
+    border-radius: 40px;
+    //transition: border-color 0.1s, color 0.1s, padding 0.1s;
+
+    &:focus {
+        border-color: #EB00FF;
+        box-shadow: 0 0 0 1px #EB00FF inset;
+        outline: 0;
+    }
+}

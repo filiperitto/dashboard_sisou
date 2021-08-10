@@ -1,0 +1,317 @@
+//== Header Section ::::
+header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    position: relative;
+    padding: 1em 0;
+    z-index: 99;
+    transition: all 300ms ease-in-out;
+    background: #fff;
+    color: #fff;
+    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
+
+    @include respond-to-min(750){
+        background: transparent;
+
+    }
+
+    .wrap {
+        max-width: 1440px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+    }
+
+    .logo-mini {
+        position: relative;
+        margin: 0 auto 0;
+        left: 0px;
+        right: 0;
+        width: 100%;
+        max-width: 80px;
+        //opacity: 0;
+        transition: all 300ms ease-in-out;
+        order: 0;
+        &:hover{
+            transform: scale(1.1);
+        }
+        @include respond-to-min(750){
+            order: 0;
+            max-width: 80px;
+        }
+        @include respond-to-min(960){
+            position: absolute;
+            margin: 0 auto 0;
+        }
+        img,
+        svg{
+            width: 100%;
+            transition: all .3s ease-in-out;
+        }
+    }
+
+    nav {
+        width: 90%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background: #fff;
+        transition: all .3s ease-in-out;
+        @include respond-to-min(750){
+            width: auto;
+            height: auto;
+            position: relative;
+            top: auto;
+            right: auto;
+            background: transparent;
+        }
+        ul {
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            list-style: none;
+            display: flex;
+            margin: 80px 0 0 0;
+            padding: 0;
+            align-items: baseline;
+
+            @include respond-to-min(750){
+                align-content: space-between;
+                justify-content: center;
+                flex-direction: row;
+                margin: 0;
+            }
+            .menu-header-container{
+                width: 100%;
+                height: 100%;
+            }
+
+            li {
+                width: 100%;
+                @include respond-to-min(750){
+                    width: auto;
+                    padding-right: 40px;
+                }
+                &.current_page_item{
+                    a{
+                        color: $cor-secundaria;
+                    }
+                }
+
+                a {
+                    font-family: $font-apoio;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 19px;
+                    /* identical to box height, or 136% */
+                    
+                    
+                    color: $cor-secundaria;
+
+                    display: block;
+                    padding: 15px 0px;
+                    padding-left: 40px;
+                    @include respond-to-min(750){
+                        padding: 0;
+                    }
+                    &:hover{
+                        background-color: rgba($primary-light, 0.1);
+                        @include respond-to-min(750){
+                            background-color: transparent;
+                        }
+                    }
+                }
+                .btn.inverted{
+                    margin-left: 40px;
+                    margin-top: 40px;
+                    @include respond-to-min(750){
+                        margin: 0;
+                    }
+                    .border-wrap{
+                        padding: 12px 40px;
+                        background-color: #fff3f3 ;
+                    }
+                }
+            }
+        }
+    }
+    ul{
+        &.right-menu{
+            width: 24px;
+            height: 100%;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            list-style: none;
+            //margin: 80px 0 0 0;
+            padding: 0;
+            align-items: baseline;
+            //display: none;
+            z-index: 2;
+            @include respond-to-min(750){
+                width: auto;
+                display: flex;
+            }
+            li{
+                margin-left: 0;
+                a{
+                    font-family: $font-apoio;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 19px;
+                    /* identical to box height, or 136% */
+                    
+                    
+                    color: $cor-secundaria;
+                }
+            }
+        }
+    }
+
+    &.fixed-top {
+        background: #fff;
+        border-bottom: 1px solid #ccc;
+        padding: 0.5em 0;
+
+        .logo-mini {
+            margin: 0 auto 0;
+            margin-left: 20px;
+            opacity: 1;
+            @include respond-to-min(960){
+                
+                margin: 0 auto 0;
+            }
+        }
+
+        nav {
+            ul {
+                li {
+                    a {
+                        color: #303030;
+                    }
+                    .btn.inverted .border-wrap{
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        .hamb{
+            span{
+                background: #202020;
+            }
+        }
+    }
+
+    &.open{
+        nav{
+            right: 0;
+        }
+    }
+}
+
+.page-planos{
+    header{
+
+        nav {
+            ul {
+                li {
+                    &.current_page_item{
+                        a{
+                            color: #EB00FF;
+                        }
+                    }
+    
+                    a {
+                        color: $cor-secundaria;
+                        @include respond-to-min(750){
+                            color: $white;
+                        }
+                        &:hover{
+                            background-color: rgba($primary-light, 0.1);
+                            @include respond-to-min(750){
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        img,
+        svg{
+            path{
+                fill: $cor-secundaria;
+                @include respond-to-min(750){
+                    fill: $white;
+                }
+            }
+        }
+
+        ul{
+            &.right-menu{
+                li{
+                    a{
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        &.fixed-top {
+
+            nav {
+                ul {
+                    li {
+                        &.current_page_item{
+                            a{
+                                color: #EB00FF;
+                            }
+                        }
+        
+                        a {
+                            color: $cor-secundaria;
+                            &:hover{
+                                background-color: rgba($primary-light, 0.1);
+                                @include respond-to-min(750){
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        
+            img,
+            svg{
+                path{
+                    fill: $cor-secundaria;
+                }
+            }
+            ul{
+                &.right-menu{
+                    li{
+                        a{
+                            color: $cor-secundaria;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.page-single{
+    header{
+        background: $white;
+    }
+}
+
+//========== /Header Section

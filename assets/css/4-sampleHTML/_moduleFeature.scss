@@ -1,0 +1,222 @@
+//== Feature Section ::::
+.moduleFeature{
+    background: #fff;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    padding-top: 30px;
+    @include respond-to-min(650){
+        padding-top: 130px;
+    }
+    .wrap{
+        display: flex;
+        flex-direction: column;
+        @include respond-to-min(650){
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    .box-cont{
+        align-items: flex-start;
+    }
+    .img-box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 30px;
+        @include respond-to-min(650){
+            width: 50%;
+            position: relative;
+            order: 1;
+            padding-right: 5%;
+        }
+        img{
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            @include respond-to-min(650){
+                //max-width: 250px;
+            }
+        }
+    }
+    .text-box{
+        width: 100%;
+        order: 1;
+
+        @include respond-to-min(750){
+            width: 50%;
+            //padding: 0 70px;
+            order: 2;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            //padding-top: 230px;
+        }
+        p{
+        }
+        .btn{
+            margin: 0 auto;
+            @include respond-to-min(750){
+                margin: 0;
+            }
+        }
+    }
+    
+    .video-box{
+        width: 100%;
+        order: 1;
+        position: relative;
+        margin-top: 100px;
+
+        @include respond-to-min(650){
+            width: 65%;
+            order: 1;
+            padding-right: 5%;
+            margin-top: 0px;
+        }
+        
+        .wrapper-video{
+            width: 100%;
+            position: relative;
+            
+            .placeholder{
+                width: 100%;
+                height: auto;
+            }
+            .cta-videoAbout{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                cursor: pointer;
+                svg{
+                    width: 120px;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    path{
+                        fill: #fff;
+                    }
+                }
+            }
+            .ovals-shape{
+                position: absolute;
+                bottom: -100px;
+                left: -100px;
+                z-index: -1;
+            }
+        }
+
+        .logo-sisou{
+            width: auto;
+            height: calc(100% + 140px);
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(75%, -55%) rotate(90deg);
+            z-index: -1;
+
+            @include respond-to-min(1000){
+                transform: translate(-50%, -75px) rotate(00deg);
+            }
+        }
+    }
+}
+
+// Special
+.moduleFeature{
+    &.special{
+        margin-top: 30px;
+        padding-top: 0;
+        @include respond-to-min(650){
+            margin-top: 130px;
+        }
+        .bg-cont{
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            //background: url(../img/bg-feature-special.jpg) no-repeat;
+            background-position: top center !important;
+            background-size: cover !important;
+            @include respond-to-min(650){
+                width: 65%;
+                height: 100%;
+                top: auto;
+                bottom: 0;
+                background-position: center;
+            }
+        }
+        .text-box{
+            width: calc(100% + 20px);
+            transform: translateX(-10px);
+            background: $white;
+            margin-top: 100px;
+            padding: 20px;
+            position: relative;
+    
+            @include respond-to-min(650){
+                width: 55%;
+                //padding: 0 70px;
+                order: 2;
+                margin-top: 0;
+                margin-bottom: 100px;
+                padding-bottom: 0;
+                padding: 80px 0 50px;
+                //padding-top: 230px;
+            }
+            .title-box{
+                padding-top: 0;
+            }
+            .wave-bg{
+                display: none;
+                @include respond-to-min(650){
+                    position: absolute;
+                    top: -1px;
+                    right: 0;
+                    display: block;
+                    height: calc(100% + 1px);
+                    width: auto;
+                    z-index: -1;
+                    transform: translateX(80px);
+                }
+            }
+            .btn{
+                margin: 0 auto;
+                @include respond-to-min(650){
+                    margin: 0;
+                }
+            }
+        }
+
+    }
+}
+
+.moduleFeature{
+    &.texts{
+        .title{
+            h1{
+                font-family: $font-regular;
+                font-weight: normal;
+                font-size: 35px;
+                line-height: 45px;
+                @include respond-to-min(650){
+                    font-size: 45px;
+                    line-height: 55px;
+                }
+                b{
+                    font-weight: bold;
+                }
+            }
+            p{
+
+            }
+        }
+    }
+}
+
+//========== /Feature Section

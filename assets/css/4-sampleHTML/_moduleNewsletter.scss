@@ -1,0 +1,51 @@
+.moduleNewsletter{
+    background: $cor-secundaria;
+    padding: 40px 0;
+    .col50{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title-box{
+        span{
+            color: $white;
+        }
+        h1{
+            color: $white;
+            margin-bottom: 0;
+        }
+    }
+    form{
+        width: 100%;
+        height: auto;
+        display: flex;
+        .input-wrap{
+            width: 100%;
+            position: relative;
+            @include respond-to-min(650){
+                width: 50%;
+            }
+            input{
+                width: calc(100% - 20px);
+                font-size: 14px;
+            }
+            button{
+                width: 37px;
+                height: 37px;
+                background: #0D262D;
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin-right: 27px;
+                margin-top: 5px;
+                border-radius: 38px;
+                cursor: pointer;
+                z-index: 1;
+                svg{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}

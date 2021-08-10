@@ -1,0 +1,76 @@
+.modulePlanos{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    @include respond-to-min(650){
+        padding-top: 80px;
+    }
+    .title-box{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include respond-to-min(650){
+            margin-bottom: 40px;
+        }
+    }
+    .cards-wrap{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        @include respond-to-min(650){
+            flex-wrap: nowrap;
+        }
+    }
+    .card-plano{
+        width: 100%;
+        background: $cor-secundaria;
+        padding: 80px 0;
+        background: url(../img/card-plano-seguro.jpg) no-repeat;
+        background-position: center;
+        background-size: cover !important;
+        .wrap{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h3,
+        p{
+            color: $white;
+            text-align: center;
+        }
+        h3{
+            font-family: $font-condensed;
+            font-size: 24px;
+            margin: 15px 0 10px;
+            .sisou{
+                font-family: $font-sisou;
+                font-weight: 500;
+            }
+        }
+        p{
+            font-family: $font-sourcesans;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 17px;
+            b{
+                font-size: 40px;
+                font-weight: bold;
+                span{
+                    font-size: 25px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .btn{
+            padding: 13px 45px;
+        }
+    }
+}
+.page-planos{
+    .modulePlanos{
+        background: #F4F6FD;
+        padding-top: 0;
+    }
+}

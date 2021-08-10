@@ -1,0 +1,170 @@
+//== Steps-1 Section ::::
+.moduleSteps{
+    background: transparent;
+    z-index: 2;
+    @include respond-to-min(1000){
+        padding-top: 80px;
+    }
+    .step-box{
+        width: 100%;
+        @include respond-to-min(650){
+            width: 33%;
+            padding: 10px;
+        }
+        .card{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-self: flex-start;
+            padding: 0 20px;
+            margin-bottom: 35px;
+            border-radius: 7px;
+            background: $white;
+            @include respond-to-min(650){
+                margin-bottom: 0;
+                align-items: flex-start;
+            }
+
+            //display: none;
+            .header-step{
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-bottom: 30px;
+                transition: all .2s ease-in-out;
+                icon{
+                    width: 100%;
+                    max-width: 75px;
+                    //height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include respond-to-min(750){
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                    }
+                    svg,
+                    img{
+                        width: 100%;
+                        max-width: 75px;
+                    }
+                }
+                h4{
+                    width: 100%;
+                    
+                    margin: 10px 0 10px;
+                    display: flex;
+        
+                    font-family: 'Roboto Condensed';
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 32px;
+                    /* identical to box height, or 133% */
+        
+                    text-transform: uppercase;
+                    justify-content: center;
+        
+                    color: $cor-secundaria;
+                    padding-left: 20px;
+                    @include respond-to-min(750){
+                        text-align: left;
+                        justify-content: flex-start;
+                    }
+                }
+            }
+            p{
+                margin-top: 15px;
+                margin-bottom: 30px;
+    
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 32px;
+                position: relative;
+                /* or 200% */
+    
+                @include respond-to-min(750){  
+                    width: 100%;
+                    text-align: left;
+                }
+                &:first-child{
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 65px;
+                        height: 1px;
+                        background: $pink;
+                        top: 0;
+                        left: 0;
+                        transform: translateY(-20px);
+                    }
+                }
+    
+            }
+        }
+    }
+    .btn-wrap{
+        text-align: center;
+        span{
+            font-family: 'DM Sans';
+            font-style: italic;
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 32px;
+            /* identical to box height, or 246% */
+
+            text-align: center;
+
+            color: rgba(17, 17, 17, 0.50133);
+        }
+    }
+    .btn{
+        //margin: 0 auto;
+        padding: 10px 25px 10px;
+
+        //display: none;
+        .border-wrap{
+            padding: 12px 66px;
+        }
+    }
+}
+
+.moduleSteps{
+    &.planos{
+        margin-top: 0;
+        @include respond-to-min(650){
+            margin-top: -80px;
+            padding-top: 0;
+        }
+        .step-box{
+            .card{
+                box-shadow: 0px 4px 47px 11px rgba(17, 17, 17, 0.03);
+                padding: 20px 30px;
+                display: block;
+                transition: all .4s ease-in-out;
+                &:hover{
+                    box-shadow: 0px 4px 47px 11px rgba(241, 113, 252, 0.20);
+                }
+                &.active{
+                }
+                .header-step{
+                    margin-bottom: 0;
+                }
+                p{
+                    margin-top: 35px
+                }
+            }
+            .card-content{
+                margin: 0;
+                overflow: hidden;
+                padding-top: 15px;
+                transition: all .4s ease-in-out;
+            }
+        }
+    }
+}
+//========== /Steps Section

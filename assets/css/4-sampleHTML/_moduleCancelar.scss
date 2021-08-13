@@ -101,11 +101,18 @@
             width: 100%;
             .input-grupo{
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: center;
                 align-items: flex-end;
+                @include respond-to-min(560){
+                    flex-direction: row;
+                }
                 label{
                     margin-bottom: 20px;
+                    width: 100%;
+                    @include respond-to-min(560){
+                        width: auto;
+                    }
                 }
                 input{
                     width: 300px;
@@ -124,7 +131,6 @@
                 }
             }
         }
-        
         .btn{
             display: block;
             margin: 35px auto 20px;

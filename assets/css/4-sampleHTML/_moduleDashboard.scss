@@ -118,21 +118,42 @@
                 display: flex;
                 align-items: center;
                 padding-right: 35px;
+                flex-wrap: wrap;
+                @include respond-to-min(750){
+                    flex-wrap: nowrap;
+                }
             }
             .svg-box{
                 width: 100%;
-                max-width: 63px;
                 //margin-right: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 20px;
+                @include respond-to-min(500){
+                    width: 30%;
+                    max-width: 63px;
+                }
+                @include respond-to-min(750){
+                    width: 100%;
+                }
                 svg{
+                    max-width: 63px;
                     width: 100%;
                     height: auto;
                 }
             }
             .info-box{
-                width: 100%;
+                width: calc(100% - 67px);
                 display: flex;
                 flex-direction: column;
-                padding-left: 20px;
+                padding-left: 0;
+                @include respond-to-min(500){
+                    padding-left: 20px;
+                }
+                @include respond-to-min(750){
+                    width: 100%;
+                }
                 h5{
                     margin: 0;
                     font-size: 15px;
@@ -145,6 +166,10 @@
                 .info{
                     display: flex;
                     margin-bottom: 10px;
+                    flex-direction: column;
+                    @include respond-to-min(1100){
+                        flex-direction: row;
+                    }
                     p{
                         font-size: 12px;
                         color: #828687;
@@ -165,7 +190,7 @@
                         font-style: normal;
                         font-weight: 500;
                         font-size: 15px;
-                        display: flex;
+                        display: inline-flex;
                         align-items: center;
                         &:hover{
                             text-decoration: underline;
@@ -177,10 +202,16 @@
                 }
             }
             .btn-box{
+                width: 100%;
                 padding-left: 20px;
                 flex-shrink: 0;
+                margin-top: 20px;
+                @include respond-to-min(750){
+                    margin-top: 0;
+                    width: auto;
+                }
                 .btn{
-
+                    float: right;
                 }
             }
             .subtitle{
@@ -191,7 +222,7 @@
                 margin-top: 35px;
                 padding-right: 35px;
                 h4{
-                    font-size: 15px;
+                    font-size: 17px;
                     margin: 0;
                 }
                 a{
@@ -207,7 +238,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 .item-box{
-                    width: calc(33.3% - 35px);
+                    width: calc(100% - 35px);
                     height: auto;
                     margin-right: 35px;
                     margin-top: 35px;
@@ -215,6 +246,9 @@
                     background: #fff;
                     display: flex;
                     align-items: center;
+                    @include respond-to-min(750){
+                        width: calc(33.3% - 35px);
+                    }
                     .svg-box{
                         width: 100%;
                         max-width: 30px;
@@ -321,11 +355,22 @@
     }
     .sub_header{
         margin: 0 0 35px;
+        display: flex;
+        align-items: center;
         @include respond-to-min(750){
             margin: 35px 0;
         }
         h4{
             font-size: 18px;
+            margin-right: 5px;
+        }
+        p{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            
+            color: #828687;
         }
         svg{
             margin-right: 10px;
@@ -435,13 +480,56 @@
             }
         }
     }
+    .noti-box{
+        flex-shrink: 0;
+        align-items: flex-end;
+        ul{
+            width: 100%;
+            height: auto;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding: 0 0 30px;
+            li{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                min-height: 47px;
+                padding: 15px 22px;
+                background: #F8F8F8;
+                border-radius: 6px;
+                align-items: center;
+                margin-bottom: 17px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                @include respond-to-min(750){
+                    padding: 25px;
+                    flex-wrap: nowrap;
+                }
+                .notificacao{
+                    width: 100%;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 15px;
+                    line-height: 18px;
+                    /* identical to box height */
+                    
+                    
+                    color: #616264;
+                }
+                .btn-box{
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
     .siSorteio-box{
         width: 100%;
         background-color: #F8F8F8;
         padding: 25px 40px;
         display: flex;
         align-items: center;
-        padding-bottom: 20px;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
@@ -449,6 +537,7 @@
         @include respond-to-min(960){
             flex-wrap: nowrap;
             margin-bottom: 0px;
+            padding: 10px 40px;
         }
         .img-wrap{
             position: relative;
@@ -490,13 +579,26 @@
             &:after{
                 position: absolute;
                 content: '';
-                width: 2px;
-                height: 80px;
+                width: 80px;
+                height: 2px;
                 background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #C4C4C4 52.08%, rgba(196, 196, 196, 0) 100%);;
                 margin: auto;
-                top: 0;
+                top: auto;
                 bottom: 0;
                 right: 0;
+                left: 0;
+                display: none;
+                @include respond-to-min(625){
+                    display: block;
+                    width: 2px;
+                    height: 80px;
+                    background: linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, #C4C4C4 52.08%, rgba(196, 196, 196, 0) 100%);;
+                    margin: auto;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: auto;
+                }
             }
         }
         .data{

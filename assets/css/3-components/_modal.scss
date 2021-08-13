@@ -12,23 +12,31 @@
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   
     /* Modal Content */
+    .modal-dialog{
+      width: 100%;
+      max-width: 580px;
+      margin: auto;
+
+    }
     .modal-content {
       background-color: #fefefe;
       margin: auto;
       //padding: 20px;
       border: 1px solid #D3DCE0;
       width: 100%;
-      max-width: 450px;
+      padding: 40px;
+      border-radius: 4px;
       .modal-header{
           width: 100%;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 20px;
-          border-bottom: 1px solid #D3DCE0;
+          padding: 0;
+          //border-bottom: 1px solid #D3DCE0;
+          margin-bottom: 20px;
           h3{
+              font-family: 'Lato';
               margin: 0;
-              font-family: 'Roboto';
               font-style: normal;
               font-weight: bold;
               font-size: 24px;
@@ -39,12 +47,22 @@
               
               color: #111111;
           }
+          h5{
+            font-family: 'Lato';
+            margin: 0;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+
+            color: #616264;
+          }
       }
       .modal-body{
         width: 100%;
-        padding: 20px 20px 0;
+        padding: 0 0;
         p{
-            font-family: 'Roboto';
+          font-family: 'Lato';
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
@@ -69,6 +87,15 @@
     }
   }
   
+  .fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
   /* The Close Button */
   .close {
     color: #aaaaaa;

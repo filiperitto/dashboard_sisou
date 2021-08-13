@@ -69,59 +69,79 @@
             </div>
         </header>
 
-        <section class="moduleDashboard">
-
+        <div class="header-back-section">
             <div class="wrap">
+                <a href="javascript:history.back();">
+                    < Voltar
+                </a>
+            </div>
+        </div>
 
-                <div class="menu-dashboard">
-                    <ul>
-                        <li class="active"><a href="javascript:(0)">Meu perfil</a></li>
-                        <li><a href="assinaturas.html">Minhas assinaturas</a></li>
-                        <li><a href="notificacoes.html">Notificações <span class="noti-badge">3</span></a></li>
-                    </ul>
-                </div>
+        <section class="moduleCancelar">
 
-                <div class="container_content">
-                    <div class="sub_header">
-                        <h4>
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.83333 24.5H3.5V23.3334C3.50514 18.8252 7.15847 15.1719 11.6667 15.1667H16.3333C20.8415 15.1719 24.4949 18.8252 24.5 23.3334V24.5H22.1667V23.3334C22.1628 20.1133 19.5534 17.5039 16.3333 17.5H11.6667C8.4466 17.5039 5.83719 20.1133 5.83333 23.3334V24.5ZM14 14C10.7783 14 8.16667 11.3884 8.16667 8.16671C8.16667 4.94505 10.7783 2.33337 14 2.33337C17.2217 2.33337 19.8333 4.94505 19.8333 8.16671C19.8295 11.3868 17.2201 13.9962 14 14ZM14 4.66671C12.067 4.66671 10.5 6.23371 10.5 8.16671C10.5 10.0997 12.067 11.6667 14 11.6667C15.933 11.6667 17.5 10.0997 17.5 8.16671C17.5 6.23371 15.933 4.66671 14 4.66671Z" fill="#EB00FF"/>
-                            </svg>
-                            Meus Dados
-                        </h4>
-                    </div>
-                    
-                    <div class="data-box">
-                        <ul>
-                            <li>
-                                <span class="nameTitle">Nome</span>
-                                <span class="userDados">Filipe Ritto</span>
-                            </li>
-                            <li>
-                                <span class="nameTitle">Email</span>
-                                <span class="userDados">filipe.ritto@gmail.com</span>
-                                <a href="editar-perfil.html" class="editIcon">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.68333 17.1492C3.44956 17.1488 3.22672 17.0502 3.06916 16.8775C2.9087 16.7062 2.82896 16.4746 2.84999 16.2408L3.05416 13.9958L12.4858 4.5675L15.4333 7.51417L6.00416 16.9417L3.75916 17.1458C3.73333 17.1483 3.70749 17.1492 3.68333 17.1492ZM16.0217 6.925L13.075 3.97834L14.8425 2.21084C14.9988 2.05436 15.2109 1.96643 15.4321 1.96643C15.6533 1.96643 15.8654 2.05436 16.0217 2.21084L17.7892 3.97834C17.9456 4.13464 18.0336 4.34675 18.0336 4.56792C18.0336 4.78909 17.9456 5.0012 17.7892 5.1575L16.0225 6.92417L16.0217 6.925Z" fill="#EB00FF"/>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <span class="nameTitle">Gênero</span>
-                                <span class="userDados">Masculino</span>
-                            </li>
-                            <li>
-                                <span class="nameTitle">Telefone</span>
-                                <span class="userDados">(00) 00000-0000</span>
-                            </li>
-                            <li>
-                                <span class="nameTitle">Data de Nascimento</span>
-                                <span class="userDados">26/02/1992</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
+            <div class="wrap container-form">
+                <h2>Que pena :(</h2>
+                <p>Estaremos te esperando de volta, Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum</p>
+                <h4>Qual o motivo do cancelamento?</h4>
+                <form method="get" action="cancelar-confirm.html">
+                    <fieldset class="checkbox-container">
+                        <div class="input-checkbox">
+                            <label>Situação financeira
+                                <input class="squared-checkbox" type="checkbox" value="Situação financeira" name="">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <label>Insatisfação com os valores de seguros praticados pela <span class="sisou">siSou</span>
+                                <input class="squared-checkbox" type="checkbox" value="Insatisfação com os valores de seguros praticados pela sisou" name="">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <label>Contrastou os serviços de outra seguradora
+                                <input class="squared-checkbox" type="checkbox" value="Contrastou os serviços de outra seguradora" name="">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <label>Insatisfeito com o seguro da <span class="sisou">siSou</span>
+                                <input class="squared-checkbox" type="checkbox" value="Insatisfeito com o seguro da siSou" name="">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <label>Insatisfação com os serviços de atendimento
+                                <input class="squared-checkbox" type="checkbox" value="Insatisfação com os serviços de atendimento" name="">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <label>Sente que não tem necessidade de um seguro
+                                <input class="squared-checkbox" type="checkbox" value="Sente que não tem necessidade de um seguro" name="">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <label>Venda do imóvel
+                                <input class="squared-checkbox" type="checkbox" value="Venda do imóvel" name="">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="input-checkbox">
+                            <label>O seguro da <span class="sisou">siSou</span> não atende ao meu novo endereço
+                                <input class="squared-checkbox" type="checkbox" value="O seguro da siSou não atende ao meu novo endereço" name="">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="optional-container">
+                        <h4>Se você tem outro motivo, poderia conta para a gente?</h4>
+                        <textarea class="textarea-area" maxlength="1000"></textarea>
+                        <span>*Opcional</span>
+                    </fieldset>
+                    <input type="submit" class="btn" value="Cancelar">
+                    <a href="javascript:history.back();">Voltar</a>
+                </form>
             </div>
 
         </section>

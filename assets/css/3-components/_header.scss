@@ -3,8 +3,9 @@ header {
     width: 100%;
     height: auto;
     position: fixed;
-    position: relative;
+    //position: relative;
     padding: 1em 0;
+    top: 0;
     z-index: 99;
     transition: all 300ms ease-in-out;
     background: #fff;
@@ -13,7 +14,7 @@ header {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.02);
 
     @include respond-to-min(750){
-        background: transparent;
+        //background: transparent;
 
     }
 
@@ -140,6 +141,12 @@ header {
                 }
             }
         }
+        
+        &.menu-mobile{
+            @include respond-to-min(750){
+                display: none;
+            }
+        }
     }
     ul{
         &.right-menu{
@@ -152,7 +159,7 @@ header {
             //margin: 80px 0 0 0;
             padding: 0;
             align-items: baseline;
-            //display: none;
+            display: none;
             z-index: 2;
             @include respond-to-min(750){
                 width: auto;
@@ -213,6 +220,16 @@ header {
     &.open{
         nav{
             right: 0;
+            display: none;
+            @include respond-to-min(750){
+                display: block;
+            }
+            &.menu-mobile{
+                display: block;
+                @include respond-to-min(750){
+                    display: none;
+                }
+            }
         }
     }
 }

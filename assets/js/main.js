@@ -1,4 +1,4 @@
-(function () {
+/*(function () {
 
     var headerScroll = getId('header-main'),
         scrollHeight = 10,
@@ -32,7 +32,7 @@
     }
 
 
-})();
+})(); */
 //------------------------ Header
 
 //-== HamburgerMenu Toggle

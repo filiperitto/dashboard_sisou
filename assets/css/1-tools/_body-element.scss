@@ -76,6 +76,10 @@ body {
     width: 100%;
     position: relative;
     overflow: hidden;
+    padding-top: 65px;
+    @include respond-to-min(750){
+        padding-top: 96px;
+    }
 }
 //== Section Defaut ::::
 section {
@@ -304,7 +308,8 @@ mark{
     
 .gigantic,
 h1, h2, h3, h4, h5, h6{
-    font-family: $font-regular;
+    //font-family: $font-regular;
+    font-family: 'Lato', sans-serif;
     color: $cor-secundaria;
     font-weight: bold;
     icon{
@@ -385,6 +390,7 @@ p{
     margin: 10px 0 10px 0;
     color: $cor-secundaria;
     font-family: $font-regular;
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;

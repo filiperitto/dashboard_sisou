@@ -17,8 +17,33 @@ input[type=date] {
     padding: 15px 20px;
     margin: 0;
     resize: none;
-    height: 47px;
-    border-radius: 40px;
+    height: 47px;    
+    border-radius: 4px;
+    //transition: border-color 0.1s, color 0.1s, padding 0.1s;
+
+    &:focus {
+        border-color: #EB00FF;
+        box-shadow: 0 0 0 1px #EB00FF inset;
+        outline: 0;
+    }
+}
+textarea {
+    width: 100%;
+    font-family: $font-regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height, or 119% */
+
+
+    background-color: #fff;
+    color: #111111;
+    border: 1px solid #D3DCE0;
+    padding: 15px 20px;
+    margin: 0;
+    height: auto;
+    border-radius: 4px;
     //transition: border-color 0.1s, color 0.1s, padding 0.1s;
 
     &:focus {

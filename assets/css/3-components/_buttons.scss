@@ -2,7 +2,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     font-size: 12px;
     line-height: 19px;
     /* identical to box height, or 136% */
@@ -29,36 +29,23 @@
         box-shadow: 0 0 0px 6px rgba($pink, 0.2);
     }
 
-    &.secundario{
-        background: $cor-secundaria;
-        border: 2px solid $cor-secundaria;
-        &:hover{
-            background: $purple;
-            border: 2px solid $purple;
-        }
-        &:active{
-            border: 2px solid $purple;
-        }
-        &:focus{
-            outline: none;
-            box-shadow: 0 0 0px 6px rgba($cor-secundaria, 0.2);
-        }
-    }
+    &.grey{
+        background: #EDEDED;
+        border: 2px solid rgba(80, 81, 90, 0.1);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        padding: 11px 30px;
+        
+        color: rgba(80, 81, 90, 0.83);
 
-    &.white-trans{
-        background: rgba($white, 0.5);
-        border: 2px solid $white;
         &:hover{
-            color: $cor-secundaria;
-            background: $white;
-            border: 2px solid $white;
-        }
-        &:active{
-            border: 2px solid $white;
+            background: rgba(80, 81, 90, 0.1);
+            border: 2px solid rgba(80, 81, 90, 0.1);
         }
         &:focus{
             outline: none;
-            box-shadow: 0 0 0px 6px rgba($white, 0.2);
+            box-shadow: 0 0 0px 6px rgba(107, 107, 127, 0.2);
         }
     }
 }
